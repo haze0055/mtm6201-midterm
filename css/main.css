@@ -524,3 +524,224 @@ menu stays usable without JavaScript.  */
     transform: translateX(-50%);
   }
 }
+
+/* Keep extra text available to screen readers without showing it on screen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Testimonial cards scroll sideways on small screens */
+.testimonials {
+  padding-block: 5rem 3rem;
+}
+
+.testimonials-scroller {
+  contain: layout;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+
+.testimonials-list {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0.5rem 0.25rem 1.5rem;
+  list-style: none;
+}
+
+.testimonial {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e4e4ec;
+  border-radius: 8px;
+}
+
+.testimonial-featured {
+  border-color: var(--color-primary);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-header img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.testimonial-place {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #55556b;
+}
+
+.testimonial-rating {
+  margin: 0 0 0 auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.testimonial-rating span[aria-hidden="true"] {
+  color: #e8890c;
+}
+
+.testimonial blockquote {
+  margin: 0;
+}
+
+.testimonial blockquote p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #55556b;
+}
+
+@media (min-width: 768px) {
+  .testimonials-scroller {
+    overflow: visible;
+  }
+
+  .testimonials-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+
+/* The subscribe card places the text and button side by side when space allows */
+.subscribe {
+  padding-block: 3rem 2rem;
+}
+
+.subscribe-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(28, 28, 58, 0.08);
+}
+
+.subscribe-card h2 {
+  max-width: 420px;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.subscribe-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #55556b;
+}
+
+/* Footer links stack on small screens and form columns on wide screens */
+.site-footer {
+  padding-block: 2rem 3rem;
+  background: var(--color-bg-soft);
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.footer-brand img {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  font-size: 0.85rem;
+  color: #55556b;
+}
+
+.site-footer h2 {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.site-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer li {
+  margin-bottom: 0.6rem;
+}
+
+.site-footer li a {
+  font-size: 0.85rem;
+  color: #55556b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer li a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Round social links with a light shadow */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(28, 28, 58, 0.1);
+}
+
+.social-links img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.8rem;
+}
