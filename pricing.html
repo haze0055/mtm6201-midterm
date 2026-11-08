@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | LaslesVPN</title>
+  <meta name="description" content="Compare the Free, Standard and Premium LaslesVPN plans and choose the one that fits you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- This skip link helps keyboard users jump straight to the page content -->
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- This header uses the same navigation as the home page -->
+  <header class="header">
+    <div class="wrapper header-content">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="LaslesVPN home">
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <!-- aria-current marks Pricing as the page the visitor is viewing -->
+          <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="contact.html">Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="links">
+        <a class="signin" href="#">Sign In</a>
+        <a class="button button-outline" href="#">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- The page has one main heading which describes the pricing content -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrapper">
+        <h1 id="page-title">Simple pricing for every need</h1>
+        <p>
+          Start for free and upgrade whenever you are ready. Every plan
+          includes an encrypted connection and unlimited bandwidth.
+        </p>
+      </div>
+    </section>
+
+    <!-- These plan cards follow the same design as the home page -->
+    <section class="plans section-soft" aria-label="Plans">
+      <div class="wrapper">
+        <div class="plans-grid">
+          <article class="plan">
+            <!-- This image is decorative because the plan name gives the needed information -->
+            <img class="plan-icon" src="images/Free.png" alt="">
+            <h2 class="plan-name">Free Plan</h2>
+            <ul class="check-list plan-features">
+              <li>Unlimited Bandwidth</li>
+              <li>Encrypted Connection</li>
+              <li>No Traffic Logs</li>
+              <li>Works on All Devices</li>
+            </ul>
+            <div class="plan-footer">
+              <p class="plan-price">Free</p>
+              <a class="button button-outline" href="#" aria-label="Select the Free plan">Select</a>
+            </div>
+          </article>
+
+          <article class="plan">
+            <!-- Each article shows one plan and its features -->
+            <img class="plan-icon" src="images/Free.png" alt="">
+            <h2 class="plan-name">Standard Plan</h2>
+            <ul class="check-list plan-features">
+              <li>Unlimited Bandwidth</li>
+              <li>Encrypted Connection</li>
+              <li>Yes Traffic Logs</li>
+              <li>Works on All Devices</li>
+              <li>Connect Anywhere</li>
+            </ul>
+            <div class="plan-footer">
+              <p class="plan-price">$9 <span>/ mo</span></p>
+              <a class="button button-outline" href="#" aria-label="Select the Standard plan">Select</a>
+            </div>
+          </article>
+
+          <article class="plan plan-featured">
+            <img class="plan-icon" src="images/Free.png" alt="">
+            <h2 class="plan-name">Premium Plan</h2>
+            <ul class="check-list plan-features">
+              <li>Unlimited Bandwidth</li>
+              <li>Encrypted Connection</li>
+              <li>Yes Traffic Logs</li>
+              <li>Works on All Devices</li>
+              <li>Connect Anywhere</li>
+              <li>Get New Features</li>
+            </ul>
+            <div class="plan-footer">
+              <p class="plan-price">$12 <span>/ mo</span></p>
+              <a class="button button-primary" href="#" aria-label="Select the Premium plan">Select</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- This table lets visitors compare plan features row by row -->
+    <section class="compare" aria-labelledby="compare-title">
+      <div class="wrapper">
+        <h2 class="section-title" id="compare-title">Compare the plans</h2>
+        <p class="section-intro">See exactly what each plan includes, side by side.</p>
+
+        <!-- Scroll the table here on small screens instead of scrolling the page -->
+        <div class="compare-scroller" tabindex="0" role="region"
+             aria-label="Plan comparison table">
+          <table class="compare-table">
+            <caption class="visually-hidden">Features included in each LaslesVPN plan</caption>
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Free</th>
+                <th scope="col">Standard</th>
+                <th scope="col">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Price</th>
+                <td>Free</td>
+                <td>$9 / mo</td>
+                <td>$12 / mo</td>
+              </tr>
+              <tr>
+                <th scope="row">Unlimited bandwidth</th>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Encrypted connection</th>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Works on all devices</th>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Connect anywhere</th>
+                <td class="no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Get new features first</th>
+                <td class="no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- The subscribe banner is shared with the home page -->
+    <section class="subscribe section-soft" aria-labelledby="subscribe-title">
+      <div class="wrapper">
+        <div class="subscribe-card">
+          <div>
+            <h2 id="subscribe-title">Subscribe Now for Get Special Features!</h2>
+            <p>Let's subscribe with us and find the fun.</p>
+          </div>
+          <a class="button button-primary" href="#">Subscribe Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This footer uses the same links and layout as the home page -->
+  <footer class="site-footer">
+    <div class="wrapper footer-grid">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="images/logo.png" alt="LaslesVPN home">
+        </a>
+        <p>LaslesVPN is a private virtual network that has unique features and has high security.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" aria-label="LaslesVPN on Facebook">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://x.com/" aria-label="LaslesVPN on X">
+            <img src="images/x.png" alt="X">
+          </a>
+          <a href="https://www.instagram.com/" aria-label="LaslesVPN on Instagram">
+            <img src="images/insta.png" alt="Instagram">
+          </a>
+        </div>
+        <p class="copyright">&copy;2026 LaslesVPN</p>
+      </div>
+
+      <nav aria-label="Product">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="#">Download</a></li>
+          <li><a href="pricing.html" aria-current="page">Pricing</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Server</a></li>
+          <li><a href="#">Countries</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Engage">
+        <h2>Engage</h2>
+        <ul>
+          <li><a href="#">LaslesVPN?</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Earn money">
+        <h2>Earn Money</h2>
+        <ul>
+          <li><a href="#">Affiliate</a></li>
+          <li><a href="#">Become Partner</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
