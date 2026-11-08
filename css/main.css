@@ -1,0 +1,151 @@
+
+/*  colors nd fonts
+   Kept in one place, so the brand can be changed in one line  */
+:root {
+  --color-primary: #e02b2b;  
+  --color-text: #1c1c3a;     
+  --color-bg-soft: #fafafa;  
+  --font-main: "Poppins", Arial, sans-serif;
+}
+
+/*  border-box makes width include padding which makes layout maths easier  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* Images never overflow their container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Skip link: hidden above the screen until a keyboard user tabs to it */
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-text);
+  color: #fff;
+}
+
+.skip:focus {
+  top: 16px;
+}
+
+/* Keyboard users need to see where they are Never remove outlines without replacing them. */
+:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* Centres the content and stops it getting too wide on big screens.
+   The side padding keeps text off the screen edge on phones */
+.wrapper {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* buttons:
+   One base class plus a modifier, so the same styles can be reused on every page.
+   The transition makes the hover effect smooth   */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;          /* pill shape from the mockup */
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.button-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/*  Flexbox puts logo, nav and buttons in one row and spaces them out
+flex-wrap lets them drop onto extra rows on small screens, so the
+menu stays usable without JavaScript.  */
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1rem;
+}
+
+.logo img {
+  width: 140px;    /* fixed width the height scales automatically */
+}
+
+/* On mobile the nav takes the full row under the logo */
+.nav {
+  order: 3;
+  flex-basis: 100%;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;      /* remove the bullet points */
+}
+
+.nav a {
+  font-size: 0.85rem;
+  color: #55556b;      
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signin {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.signin:hover {
+  color: var(--color-primary);
+}
+
+/* Desktopthe nav goes back to the middle of a single row */
+@media (min-width: 900px) {
+  .nav {
+    order: 0;
+    flex-basis: auto;
+  }
+}
