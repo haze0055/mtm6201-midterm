@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and Help | LaslesVPN</title>
+  <meta name="description" content="Get help with LaslesVPN. Send us a message or read the answers to common questions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- This skip link helps keyboard users jump straight to the page content -->
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- This header uses the same navigation as the other pages -->
+  <header class="header">
+    <div class="wrapper header-content">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="LaslesVPN home">
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <!-- aria-current marks Help as the page the visitor is viewing -->
+          <li><a href="contact.html" aria-current="page">Help</a></li>
+        </ul>
+      </nav>
+
+      <div class="links">
+        <a class="signin" href="#">Sign In</a>
+        <a class="button button-outline" href="#">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrapper">
+        <h1 id="page-title">How can we help?</h1>
+        <p>
+          Send us a message and we will get back to you, or look through the
+          answers to common questions below.
+        </p>
+      </div>
+    </section>
+
+    <!-- The form and support details sit side by side on wider screens -->
+    <section class="contact section-soft" aria-labelledby="contact-title">
+      <div class="wrapper contact-inner">
+        <div class="contact-form-card">
+          <h2 id="contact-title">Send us a message</h2>
+
+          <!-- This static page cannot send messages, but the browser checks required fields -->
+          <form class="form" action="#" method="post">
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-row">
+              <label for="topic">What do you need help with?</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option value="billing">Billing and plans</option>
+                <option value="connection">Connection problems</option>
+                <option value="account">My account</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button class="button button-primary" type="submit">Send message</button>
+          </form>
+        </div>
+
+        <!-- The address element groups the support contact details -->
+        <aside class="contact-info" aria-labelledby="support-title">
+          <h2 id="support-title">Support details</h2>
+          <address>
+            <p>
+              <strong>Email</strong><br>
+              <a href="mailto:support@laslesvpn.example">support@laslesvpn.example</a>
+            </p>
+            <p>
+              <strong>Support hours</strong><br>
+              Monday to Friday, 9:00 to 18:00
+            </p>
+            <p>
+              <strong>Reply time</strong><br>
+              Usually within one working day
+            </p>
+          </address>
+        </aside>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrapper">
+        <h2 class="section-title" id="faq-title">Frequently asked questions</h2>
+        <p class="section-intro">Quick answers to the things people ask us most.</p>
+
+        <div class="faq-list">
+          <!-- Details and summary open and close without JavaScript -->
+          <details class="faq-item">
+            <summary>Does LaslesVPN keep logs of my activity?</summary>
+            <p class="faq-answer">
+              The Free plan keeps no traffic logs at all. The Standard and
+              Premium plans keep basic connection logs to help us fix problems.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How many devices can I use?</summary>
+            <p class="faq-answer">
+              Every plan works on all of your devices, including phones,
+              tablets and computers.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I change my plan later?</summary>
+            <p class="faq-answer">
+              Yes. You can move up or down between the Free, Standard and
+              Premium plans at any time from your account.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What does Connect Anywhere mean?</summary>
+            <p class="faq-answer">
+              It lets you choose a server in any of our locations around the
+              world, so you can connect from wherever you are travelling.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- This footer uses the same links and layout as the other pages -->
+  <footer class="site-footer">
+    <div class="wrapper footer-grid">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="images/logo.png" alt="LaslesVPN home">
+        </a>
+        <p>LaslesVPN is a private virtual network that has unique features and has high security.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" aria-label="LaslesVPN on Facebook">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://x.com/" aria-label="LaslesVPN on X">
+            <img src="images/x.png" alt="X">
+          </a>
+          <a href="https://www.instagram.com/" aria-label="LaslesVPN on Instagram">
+            <img src="images/insta.png" alt="Instagram">
+          </a>
+        </div>
+        <p class="copyright">&copy;2026 LaslesVPN</p>
+      </div>
+
+      <nav aria-label="Product">
+        <h2>Product</h2>
+        <ul>
+          <li><a href="#">Download</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Server</a></li>
+          <li><a href="#">Countries</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Engage">
+        <h2>Engage</h2>
+        <ul>
+          <li><a href="#">LaslesVPN?</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Earn money">
+        <h2>Earn Money</h2>
+        <ul>
+          <li><a href="#">Affiliate</a></li>
+          <li><a href="#">Become Partner</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
