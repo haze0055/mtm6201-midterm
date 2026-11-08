@@ -149,3 +149,224 @@ menu stays usable without JavaScript.  */
     flex-basis: auto;
   }
 }
+
+/* The primary button reuses the shared button styles with a solid background */
+.button-primary {
+  padding: 0.85rem 2.25rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(224, 43, 43, 0.3);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.button-primary:hover {
+  background: #c41f1f;
+  transform: translateY(-3px);
+}
+
+/* The hero stacks its text and illustration on small screens */
+.hero {
+  padding-block: 2rem 4rem;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.25;
+}
+
+.hero-content p {
+  max-width: 420px;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+  color: #55556b;
+}
+
+/* Wider screens place the text beside the illustration */
+@media (min-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* The hero text fades in and the illustration floats gently */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fade-up 0.9s ease-out both;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.hero-image img {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Respect the reduced-motion preference set in a visitor's system settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* The stats card stacks its items on small screens */
+.stats {
+  padding-block: 1rem 4rem;
+}
+
+.stats-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(28, 28, 58, 0.08);
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.stats-item + .stats-item {
+  border-top: 1px solid #e4e4ec;
+}
+
+.stats-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-primary);
+  background: #fde8e8;
+  border-radius: 50%;
+}
+
+.stats-number {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stats-label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #55556b;
+}
+
+/* Wider screens display the stats in three columns */
+@media (min-width: 768px) {
+  .stats-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats-item {
+    padding-block: 2.5rem;
+  }
+
+  .stats-item + .stats-item {
+    border-top: 0;
+    border-left: 1px solid #e4e4ec;
+  }
+}
+
+/* The features section stacks its illustration and copy on small screens */
+.features {
+  padding-block: 2rem 5rem;
+}
+
+.features-inner {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.features-content h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.features-content p {
+  max-width: 420px;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: #55556b;
+}
+
+/* Wider screens place the illustration beside the feature copy */
+@media (min-width: 768px) {
+  .features-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* The check list uses CSS-drawn green checks, with no extra images */
+.check-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  margin-bottom: 0.9rem;
+  padding-left: 2rem;
+  font-size: 0.85rem;
+  color: #55556b;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #2e9e6b;
+  border-radius: 50%;
+}
+
+.check-list li::after {
+  content: "";
+  position: absolute;
+  left: 0.43rem;
+  top: 0.4rem;
+  width: 0.3rem;
+  height: 0.55rem;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
